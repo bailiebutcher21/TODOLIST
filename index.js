@@ -1,37 +1,39 @@
 
-
-$(function(){
-    $("#add-task").click(function(){
-        addItem();
+    $("#inputbox").keyup(function(event){
+        var input = $("#inputbox").val();
+        if(event.keyCode ===13){
+            addItem(input);
+        }
     });
 
-    /*$("#inputbox").keyup(function(event){
-        if(event.keyCode ===13){
-            addItem();
-        }
-    });*/
-});
-
-function addItem() {
-    var thelabel = $("#addinput").val();
+function addItem(input) {
+    var thelabel = $("#inputbox").val();
     if (thelabel !== "") {
-        var inputdiv = "<div id='creatediv'><span>" + thelabel + "</span><button onclick='editItem(this)'>Edit</button><button onclick='deleteItem(this)'>Delete</button></div>";
+        var inputdiv = "<div><span onclick='editItem(this)'>" + thelabel + "</span><button onclick='deleteItem(this)'>Delete</button></div>";
+
         $("#unfinished-tasks").append(inputdiv);
-        $("#addinput").val("");
+        $("#inputbox").val("");
     }
 }
 
-function editItem(element){
+    var editItem = function(element) {
+        var text = element.innerText;
+        var input ="<input onkeyup='save(this)' value='"+ text +"'>";
+        $(element).parent().prepend(input);
+        $(element).remove();
 
-}
+    };
+function save(element){
+    if(event.keyCode ===13){
+        var text = element.value;
+        var span = "<span>"+ text +" </span>";
+        $(element).parent().prepend(span);
+        $(element).remove();
+    }}
 
 function deleteItem(element){
     $(element).parent().remove();
 }
-/*function doneBtn(){
-    $(document.getElementById('checkbox').click());
-    $("#completed-tasks").append(inputdiv);
-        $("#addinput").val("");
-}*/
+
 
 

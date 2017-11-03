@@ -13,16 +13,20 @@ margin:0 210px 0 210px;
 #container{
     display:flex;
     justify-content: space-around;
+    width:100%;
+    flex-direction: row;
+    flex:1;
+    align-self: stretch;
 }
+
 #add-task{
-    height:200px;
     width:500px;
-    -webkit-align-items: stretch;
     background-color:#619387;
 }
 #button{
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 30px;
 }
 #inputbox{
     width:225px;
@@ -30,7 +34,6 @@ margin:0 210px 0 210px;
     margin-left:135px;
 }
 #unfinished-tasks{
-    height:200px;
     width:500px;
     background-color:#C9FDF1;
 }
