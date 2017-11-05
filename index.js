@@ -9,7 +9,7 @@
 function addItem(input) {
     var thelabel = $("#inputbox").val();
     if (thelabel !== "") {
-        var inputdiv = "<div><span onclick='editItem(this)'>" + thelabel + "</span><button onclick='deleteItem(this)'>Delete</button></div>";
+        var inputdiv = "<div><span onclick='editItem(this)'>" + thelabel + "</span><button id=deletebutton onclick='deleteItem(this)'>Delete</button></div>";
 
         $("#unfinished-tasks").append(inputdiv);
         $("#inputbox").val("");

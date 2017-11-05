@@ -23,13 +23,6 @@ body{
     width:500px;
     background-color:#619387;
 }
-#add-list{
-    background-color:#90E2D1;
-    width:200px;
-    align-self: stretch;
-    font-family: 'Shadows Into Light', cursive;
-
-}
 #button{
     text-align: center;
     margin-top: 10px;
@@ -55,7 +48,10 @@ body{
     font-family: 'Shadows Into Light', cursive;
     font-size:25px;
 }
-.headcontainer{
+#headcontainer{
     display:flex;
-    justify-content: flex-start;
+    justify-content: center;
+}
+#deletebutton{
+
 }
