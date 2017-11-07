@@ -1,6 +1,6 @@
 body{
-
     background-color: lightgray;
+    width:1000px;
 }
 #topimage img{
     width:1000px;
@@ -12,11 +12,11 @@ body{
 }
 #container{
     display:flex;
+    justify-content: space-around;
     width:100%;
     flex-direction: row;
     flex:1;
     align-self: stretch;
-    margin:0 210px 0 210px;
 }
 
 #add-task{
@@ -51,7 +51,4 @@ body{
 #headcontainer{
     display:flex;
     justify-content: center;
-}
-#deletebutton{
-
 }
