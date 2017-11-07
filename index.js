@@ -10,7 +10,7 @@ function addItem(input) {
     var thelabel = $("#inputbox").val();
 
     if (thelabel !== "") {
-        var inputdiv = "<div><input type='checkbox' onclick='markComplete()'><span onclick='editItem(this)'>" + thelabel + "</span><button class=deletebutton id=deletebutton onclick='deleteItem(this)'>X</button></div>";
+        var inputdiv = "<div class='div'><input type='checkbox' onclick='markComplete()'><span onclick='editItem(this)'>" + thelabel + "</span><button class=deletebutton id=deletebutton onclick='deleteItem(this)'>Delete</button></div>";
 
         $("#unfinished-tasks").append(inputdiv);
         $("#inputbox").val("");

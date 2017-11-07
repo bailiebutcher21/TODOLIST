@@ -55,9 +55,18 @@ body{
     display:flex;
     justify-content: center;
 }
-.deletebutton{
-    width:35px;
-    height:35px;
+.deletebutton {
+    width: 75px;
+    height: 20px;
+    font-size: 15px;
+    justify-content: flex-end;
+    position:absolute;
+    right:10px;
+    margin-bottom: 13px;
+}
+.div{
+    position: relative;
+    margin-top: 15px;
 }
 /*ul li.checked {
     background: #888;
