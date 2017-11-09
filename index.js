@@ -8,7 +8,7 @@ $("#inputbox").keyup(function(event){
 function addItem(input) {
     var thelabel = $("#inputbox").val();
     if (thelabel !== "") {
-        var inputdiv = "<div><span onclick='editItem(this)'>" + thelabel + "</span><button id=deletebutton onclick='deleteItem(this)'>DELETE</button><button class='completedbtn' onclick='completeItem(this)'>COMPLETE</button></div>";
+        var inputdiv = "<div id='lists'><span onclick='editItem(this)'>" + thelabel + "</span><button id=deletebutton onclick='deleteItem(this)'>DELETE</button><button class='completedbtn' onclick='completeItem(this)'>COMPLETE</button></div>";
 
         $("#unfinished-tasks").append(inputdiv);
         $("#inputbox").val("");
@@ -40,6 +40,7 @@ function save(element){
 function deleteItem(element){
     $(element).parent().remove();
 }
+
 
 
 
