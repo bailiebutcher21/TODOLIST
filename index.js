@@ -1,4 +1,3 @@
-
 $("#inputbox").keyup(function(event){
     var input = $("#inputbox").val();
     if(event.keyCode ===13){
@@ -8,21 +7,21 @@ $("#inputbox").keyup(function(event){
 
 function addItem(input) {
     var thelabel = $("#inputbox").val();
-
     if (thelabel !== "") {
-        var inputdiv = "<div class='div'><input type='checkbox' onclick='markComplete()'><span onclick='editItem(this)'>" + thelabel + "</span><button class=deletebutton id=deletebutton onclick='deleteItem(this)'>Delete</button></div>";
+        var inputdiv = "<div><span onclick='editItem(this)'>" + thelabel + "</span><button id=deletebutton onclick='deleteItem(this)'>DELETE</button><button class='completedbtn' onclick='completeItem(this)'>COMPLETE</button></div>";
 
         $("#unfinished-tasks").append(inputdiv);
         $("#inputbox").val("");
-
-      //  $("#source").appendTo("#markComplete");
     }
 }
-var markComplete = function (element){
- var inputdiv = "<div><button id=deletebutton onclick='deleteItem(this)'>X</button></div>";
 
+var completeItem = function(element){
+    $("#completed-tasks").append($(element).parent());
+    var btn = $(element).parent();
+    $(btn).find(".completedbtn").remove();
 
 };
+
 var editItem = function(element) {
     var text = element.innerText;
     var input ="<input onkeyup='save(this)' value='"+ text +"'>";
@@ -41,6 +40,7 @@ function save(element){
 function deleteItem(element){
     $(element).parent().remove();
 }
+
 
 
 
